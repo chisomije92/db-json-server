@@ -5,8 +5,21 @@ const jsonServer = require("json-server");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
+const cors = require("cors");
+
+server.options("*", cors());
+
+server.use(
+	cors({
+		origin: true,
+		credentials: true,
+		preflightContinue: false,
+		methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+	})
+);
 
 server.use(middlewares);
+server.use(cors());
 // Add this before server.use(router)
 server.use(
 	jsonServer.rewriter({
