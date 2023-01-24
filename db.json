@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1674519682265,
+      "completed": false,
+      "todo": "Learn about Angular"
+    },
+    {
+      "id": 1674519734606,
+      "completed": false,
+      "todo": "Code a Todo Project"
+    },
+    {
+      "id": 1674519762971,
+      "completed": false,
+      "todo": "Learn about React"
+    }
+  ]
+}
